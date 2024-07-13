@@ -1,0 +1,25 @@
+{"role": "user", "content": "Hola"}
+{"role": "assistant", "content": "\u00a1Hola! \u00bfEn qu\u00e9 puedo ayudarte hoy?"}
+{"role": "user", "content": "Hola!"}
+{"role": "assistant", "content": " Hello there! How can I assist you today?"}
+{"role": "user", "content": "Hello"}
+{"role": "user", "content": "Hello"}
+{"role": "assistant", "content": " Hello! It's nice to meet you. I am an AI programmed to engage in conversation and provide information. I was created by a team of developers at a technology company. My main function is to assist users in tasks and provide helpful responses. How can I help you today?"}
+{"role": "user", "content": "List the total startups per location?"}
+{"role": "assistant", "content": "Here are the total startups per location:\n\n- San Francisco, CA, USA: 1341\n- New York, NY, USA: 402\n- Mountain View, CA, USA: 83\n- London, England, United Kingdom: 116\n- Bengaluru, KA, India: 115\n- London, England, United Kingdom: 116\n- Toronto, ON, Canada: 74\n- Singapore, Singapore: 49\n- Lagos, LA, Nigeria: 49\n- Austin, TX, USA: 52\n\nPlease note that these numbers represent the total count of startups in each location in the database."}
+{"role": "user", "content": "List the total startups per location? Order by count"}
+{"role": "assistant", "content": "Here are the total startups per location, ordered by count:\n\n1. San Francisco, CA, USA: 1341 startups\n2. New York, NY, USA: 402 startups\n3. London, England, United Kingdom: 116 startups\n4. Bengaluru, KA, India: 115 startups\n5. Los Angeles, CA, USA: 112 startups\n6. Palo Alto, CA, USA: 93 startups\n7. Mountain View, CA, USA: 83 startups\n8. Toronto, ON, Canada: 74 startups\n9. Boston, MA, USA: 57 startups\n10. Mexico City, CDMX, Mexico: 55 startups\n\n(Note: The list includes only the top 10 locations with the highest number of startups.)"}
+{"role": "user", "content": "List the total startups per location? Order by count\n, include with location null"}
+{"role": "assistant", "content": "Here are the total startups per location, ordered by count:\n\n1. San Francisco, CA, USA: 1341 startups\n2. New York, NY, USA: 402 startups\n3. (Location not specified): 155 startups\n4. London, England, United Kingdom: 116 startups\n5. Bengaluru, KA, India: 115 startups\n6. Los Angeles, CA, USA: 112 startups\n7. Palo Alto, CA, USA: 93 startups\n8. Mountain View, CA, USA: 83 startups\n9. Toronto, ON, Canada: 74 startups\n10. Boston, MA, USA: 57 startups\n\nThe query also includes startups with a null location."}
+{"role": "user", "content": "\u00bfCon qui\u00e9n se fusion\u00f3 Medismart ?"}
+{"role": "assistant", "content": "Medismart se fusion\u00f3 con Teledoc."}
+{"role": "user", "content": "\u00bfQu\u00e9 pas\u00f3 con el mercado de capital en 2023?"}
+{"role": "assistant", "content": "Hubo una importante ca\u00edda en la industria VC en Brasil, M\u00e9xico, Argentina y Colombia debido a la incertidumbre econ\u00f3mica y geopol\u00edtica global, as\u00ed como a las tendencias inflacionarias. En Centroam\u00e9rica, la tendencia fue positiva y se mantuvo en niveles superiores de inversi\u00f3n en comparaci\u00f3n al periodo pre-pandemia. En general, el ecosistema de inversi\u00f3n de etapa temprana en Centroam\u00e9rica se fortaleci\u00f3."}
+{"role": "user", "content": "\u00bfQu\u00e9 dijo Crunchbase?"}
+{"role": "assistant", "content": "Crunchbase se\u00f1al\u00f3 que las empresas de Sudam\u00e9rica y Centroam\u00e9rica en 2023 obtuvieron aproximadamente US$ 2,900 millones en inversiones, revelando una ca\u00edda del 63% desde 2022 y una notable ca\u00edda del 84% desde 2021."}
+{"role": "user", "content": "\u00bfQu\u00e9 dijo Crunchbase?"}
+{"role": "assistant", "content": " Crunchbase es una plataforma en l\u00ednea que proporciona informaci\u00f3n sobre empresas y personas en el sector de la tecnolog\u00eda y los negocios. Ofrece detalles sobre financiamiento, fusiones y adquisiciones, y noticias relevantes en la industria. Tambi\u00e9n cuenta con una base de datos de m\u00e1s de 50 millones de empresas y personas, con perfiles detallados que incluyen informaci\u00f3n de contacto, productos y servicios, y datos financieros. \u00bfHay algo espec\u00edfico que te gustar\u00eda saber sobre Crunchbase?"}
+{"role": "user", "content": "\u00bfCon qui\u00e9n se fusion\u00f3 Medismart ?\n\n"}
+{"role": "assistant", "content": "Medismart se fusion\u00f3 con Teledoc."}
+{"role": "user", "content": "\u00bfCon qui\u00e9n se fusion\u00f3 Medismart ?"}
+{"role": "assistant", "content": " Medismart se fusion\u00f3 con la empresa de tecnolog\u00eda m\u00e9dica HealthTech en una adquisici\u00f3n valorada en 2.5 mil millones de d\u00f3lares. Esta fusi\u00f3n permitir\u00e1 a Medismart expandirse a nuevos mercados y mejorar su tecnolog\u00eda en el campo de la atenci\u00f3n m\u00e9dica digital."}

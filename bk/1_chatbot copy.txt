@@ -1,0 +1,66 @@
+from openai import OpenAI
+import streamlit as st
+from kafka import KafkaProducer
+import json
+import pandas as pd
+import os
+
+
+
+# Kafka producer configuration
+producer = KafkaProducer(
+    bootstrap_servers=["localhost:9092"],
+    value_serializer=lambda x: json.dumps(x).encode("utf-8"),
+)
+
+# OpenAI API client setup
+client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
+
+# Initialize session state variables
+if "openai_model" not in st.session_state:
+    st.session_state["openai_model"] = "gpt-3.5-turbo"
+
+if "messages" not in st.session_state:
+    st.session_state.messages = []
+
+
+# Function to send message to Kafka topic
+def send_to_kafka(message):
+    producer.send("mytopic", value=message)
+
+
+# Display messages from session state
+for message in st.session_state.messages:
+    with st.chat_message(message["role"]):
+        st.markdown(message["content"])
+
+# Input field for user message
+if prompt := st.chat_input("What's on your mind?"):
+    # Append user message to session state
+    st.session_state.messages.append({"role": "user", "content": prompt})
+    with st.chat_message("user", avatar = '🧑‍💻'):
+        st.markdown(prompt)
+
+    # Send user message to Kafka
+    send_to_kafka({"role": "user", "content": prompt})
+
+    # Get completion from OpenAI API
+    with st.chat_message("assistant", avatar="🤖"):
+        stream = client.chat.completions.create(
+            model=st.session_state["openai_model"],
+            messages=[
+                {"role": m["role"], "content": m["content"]}
+                for m in st.session_state.messages
+            ],
+            stream=True,
+        )
+        response = st.write_stream(stream)
+
+    # Append assistant response to session state
+    st.session_state.messages.append({"role": "assistant", "content": response})
+
+    # Send assistant response to Kafka
+    send_to_kafka({"role": "assistant", "content": response})
+
+# Close Kafka producer
+producer.close()

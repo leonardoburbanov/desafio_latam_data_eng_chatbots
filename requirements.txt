@@ -1,0 +1,14 @@
+kafka-python
+pandas
+ipykernel
+streamlit
+openai
+langchain_postgres
+langchain-openai
+psycopg_binary
+langchain_text_splitters
+langchain
+langchain_community
+PyPDF2
+langchain_core
+sqlalchemy
